@@ -98,8 +98,8 @@ th, td {
 }
 
 th {
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: #e0e0e0;
+    color: #1f1f1f;
     font-weight: bold;
 }
 
@@ -109,11 +109,11 @@ tr:hover {
 }
 
 a {
-    color: #38bdf8;
-    text-decoration: none;
+    color: #0066cc;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: #0056b3;
+    color: #ff9800;
     text-decoration: underline;
 }
