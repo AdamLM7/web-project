@@ -37,7 +37,7 @@ scanBtn.addEventListener("click", () => {
     classification = "⚠️ IT'S OVER 9000! ⚠️";
 }
 
-        powerText.textContent = `Power Level: ${powerLevel}`;
+        powerText.textContent = `Scouter reading complete: ${powerLevel}`;
         classificationText.textContent = classification;
 
     }, 1000);
