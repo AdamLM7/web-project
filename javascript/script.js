@@ -31,8 +31,10 @@ scanBtn.addEventListener("click", () => {
     classification = "Planetary threat";
 } else if (powerLevel < 5000) {
     classification = "God-tier entity";
+} else if (powerLevel < 9000) {
+    classification = "Mythic-level anomaly";
 } else {
-    classification = "⚠️ OVER 9000! (unstable reading) ⚠️";
+    classification = "⚠️ IT'S OVER 9000! ⚠️";
 }
 
         powerText.textContent = `Power Level: ${powerLevel}`;
