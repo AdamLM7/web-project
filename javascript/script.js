@@ -22,16 +22,18 @@ scanBtn.addEventListener("click", () => {
         let classification = "";
 
         if (powerLevel < 100) {
-            classification = "Low-tier fighter";
-        } else if (powerLevel < 300) {
-            classification = "Trained warrior";
-        } else if (powerLevel < 600) {
-            classification = "Elite combatant";
-        } else if (powerLevel < 1000) {
-            classification = "Planetary threat";
-        } else {
-            classification = "⚠️ OVER 9000 ⚠️";
-        }
+    classification = "Low-tier fighter";
+} else if (powerLevel < 300) {
+    classification = "Trained warrior";
+} else if (powerLevel < 600) {
+    classification = "Elite combatant";
+} else if (powerLevel < 1000) {
+    classification = "Planetary threat";
+} else if (powerLevel < 5000) {
+    classification = "God-tier entity";
+} else {
+    classification = "⚠️ OVER 9000! (unstable reading) ⚠️";
+}
 
         powerText.textContent = `Power Level: ${powerLevel}`;
         classificationText.textContent = classification;
