@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scouter Power Level System</title>
+    <link rel="stylesheet" href="../css/styles4.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="../index.html">Home</a> /
+        <a href="project4.html">Project 4</a>
+    </nav>
+</header>
+
+<div class="overlay">
+<div class="container">
+
+<main>
+
+    <h1>Scouter Power Level System</h1>
+
+    <section>
+        <h2>Overview</h2>
+
+        <img src="../images/scouter.png" alt="Scouter themed power level interface design">
+
+        <p>
+            This project is a stylized “scouter” interface inspired by Dragon Ball Z, designed to estimate and compare character power levels in a fun, visual way.
+        </p>
+
+        <p>
+            Scouter readings aren't always exact—they fluctuate based on energy output, transformations, and battle conditions.
+        </p>
+    </section>
+
+    <section>
+        <h2>How It Works</h2>
+
+        <p>
+            Each character is assigned a power level based on key feats, transformations, and overall combat ability.
+        </p>
+
+        <ul>
+            <li>Strength contributes to raw damage output</li>
+            <li>Speed affects reaction and agility</li>
+            <li>Endurance determines durability</li>
+            <li>Energy represents special abilities</li>
+            <li>Stamina affects sustained combat ability</li>
+        </ul>
+
+        <p>
+            Think of it like a scouter reading—quick, dramatic, and slightly biased depending on who's reading the data.
+        </p>
+    </section>
+
+    <section>
+        <h2>Design Approach</h2>
+
+        <p>
+            The layout is inspired by anime HUDs and scouter displays using bold typography and structured panels.
+        </p>
+
+        <p>
+            Even though it's themed like a system, it’s designed to stay readable and human-friendly.
+        </p>
+    </section>
+
+    <section id="scanner">
+
+        <h2>Scan Power Level</h2>
+
+        <p class="scanner-note">
+            Enter stats to simulate a scouter reading.
+        </p>
+
+        <form id="scannerForm">
+
+            <div class="stats-grid">
+
+                <div class="input-group">
+                    <label for="strength">Strength:</label>
+                    <input type="number" id="strength" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="speed">Speed:</label>
+                    <input type="number" id="speed" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="endurance">Endurance:</label>
+                    <input type="number" id="endurance" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="energy">Energy:</label>
+                    <input type="number" id="energy" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="stamina">Stamina:</label>
+                    <input type="number" id="stamina" required>
+                </div>
+
+            </div>
+
+            <button type="button" id="scanBtn">Scan</button>
+
+            <div id="result">
+                <p id="powerText">Power Level: ???</p>
+                <p class="classification"></p>
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Scouter System Project</p>
+</footer>
+
+</div>
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

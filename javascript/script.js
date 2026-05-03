@@ -1,0 +1,40 @@
+/* Scouter Power Level System */
+
+const scanBtn = document.getElementById("scanBtn");
+const classificationText = document.querySelector(".classification");
+const powerText = document.getElementById("powerText");
+
+scanBtn.addEventListener("click", () => {
+
+    const strength = parseInt(document.getElementById("strength").value) || 0;
+    const speed = parseInt(document.getElementById("speed").value) || 0;
+    const endurance = parseInt(document.getElementById("endurance").value) || 0;
+    const energy = parseInt(document.getElementById("energy").value) || 0;
+    const stamina = parseInt(document.getElementById("stamina").value) || 0;
+
+    const powerLevel = strength + speed + endurance + energy + stamina;
+
+    powerText.textContent = "Scanning energy signature...";
+    classificationText.textContent = "";
+
+    setTimeout(() => {
+
+        let classification = "";
+
+        if (powerLevel < 100) {
+            classification = "Low-tier fighter";
+        } else if (powerLevel < 300) {
+            classification = "Trained warrior";
+        } else if (powerLevel < 600) {
+            classification = "Elite combatant";
+        } else if (powerLevel < 1000) {
+            classification = "Planetary threat";
+        } else {
+            classification = "⚠️ OVER 9000 ⚠️";
+        }
+
+        powerText.textContent = `Power Level: ${powerLevel}`;
+        classificationText.textContent = classification;
+
+    }, 1000);
+});

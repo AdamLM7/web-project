@@ -1,0 +1,170 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+    color: #00ff9c;
+}
+
+/* BACKGROUND SCOUTER THEME */
+.overlay {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)),
+        url("../images/scouter1.png") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+    border: 2px solid #00ff9c;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff9c;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* NAV */
+header nav {
+    margin-bottom: 15px;
+}
+
+header a {
+    color: #00ff9c;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* HEADINGS */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff9c;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #00ff9c;
+    padding-bottom: 5px;
+}
+
+/* TEXT */
+p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* LIST */
+ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* IMAGE */
+img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #00ff9c;
+}
+
+/* SCANNER BOX */
+#scanner {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #00ff9c;
+    border-radius: 8px;
+}
+
+/* GRID */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* INPUTS */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #00ff9c;
+    border-radius: 4px;
+    background: black;
+    color: #00ff9c;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 8px #00ff9c;
+}
+
+/* BUTTON */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: black;
+    color: #00ff9c;
+    border: 2px solid #00ff9c;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #00ff9c;
+    color: black;
+    box-shadow: 0 0 10px #00ff9c;
+}
+
+/* RESULT */
+#result {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.classification {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
