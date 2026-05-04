@@ -8,7 +8,6 @@ scanBtn.addEventListener("click", () => {
 
     const overlay = document.querySelector(".overlay");
 
-    // Reset danger state each scan
     overlay.classList.remove("danger");
 
     const strength = parseInt(document.getElementById("strength").value) || 0;
@@ -45,7 +44,7 @@ scanBtn.addEventListener("click", () => {
         let statusText = "Reading stabilized";
 
         if (powerLevel >= 9000) {
-            statusText = "⚠️ Power level fluctuating ⚠️";
+            statusText = "OVERLOAD";
             overlay.classList.add("danger");
         }
 
