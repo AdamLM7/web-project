@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+.image-credit {
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    border-left: 3px solid #00ff9c;
+    background: rgba(0, 255, 156, 0.05);
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: black;
