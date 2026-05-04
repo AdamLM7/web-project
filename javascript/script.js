@@ -6,6 +6,11 @@ const powerText = document.getElementById("powerText");
 
 scanBtn.addEventListener("click", () => {
 
+    const overlay = document.querySelector(".overlay");
+
+    // Reset danger state each scan
+    overlay.classList.remove("danger");
+
     const strength = parseInt(document.getElementById("strength").value) || 0;
     const speed = parseInt(document.getElementById("speed").value) || 0;
     const endurance = parseInt(document.getElementById("endurance").value) || 0;
@@ -14,7 +19,6 @@ scanBtn.addEventListener("click", () => {
 
     const powerLevel = strength + speed + endurance + energy + stamina;
 
-    
     powerText.textContent = "Scanning energy signature...";
     classificationText.textContent = "Calibrating scouter...";
 
@@ -38,14 +42,15 @@ scanBtn.addEventListener("click", () => {
             classification = "⚠️ IT'S OVER 9000! ⚠️";
         }
 
-        // 👇 FINAL OUTPUT
-        powerText.textContent = `Power Level: ${powerLevel.toLocaleString()}`;
-        classificationText.textContent = `${classification} | Reading stabilized`;
+        let statusText = "Reading stabilized";
 
-        
         if (powerLevel >= 9000) {
-            document.body.style.background = "darkred";
+            statusText = "⚠️ Power level fluctuating ⚠️";
+            overlay.classList.add("danger");
         }
+
+        powerText.textContent = `Power Level: ${powerLevel.toLocaleString()}`;
+        classificationText.textContent = `${classification} | ${statusText}`;
 
     }, 1000);
 });

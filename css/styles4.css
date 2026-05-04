@@ -20,6 +20,12 @@ body {
     align-items: center;
 }
 
+.overlay.danger {
+    background:
+        linear-gradient(rgba(80, 0, 0, 0.9), rgba(40, 0, 0, 0.95)),
+        url("../images/scouter.png") center/cover no-repeat;
+}
+
 .container {
     width: 90%;
     max-width: 900px;
