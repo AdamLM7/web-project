@@ -4,34 +4,22 @@
     box-sizing: border-box;
 }
 
-.image-credit {
-    margin: 10px 0 20px 0;
-    padding: 10px;
-    border-left: 3px solid #00ff9c;
-    background: rgba(0, 255, 156, 0.05);
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
 body {
     font-family: Arial, sans-serif;
     background: black;
     color: #00ff9c;
 }
 
-/* BACKGROUND SCOUTER THEME */
 .overlay {
     min-height: 100vh;
     background:
         linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)),
         url("../images/scouter.png") center/cover no-repeat;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* MAIN CONTAINER */
 .container {
     width: 90%;
     max-width: 900px;
@@ -42,7 +30,6 @@ body {
     background-color: rgba(0, 0, 0, 0.85);
 }
 
-/* NAV */
 header nav {
     margin-bottom: 15px;
 }
@@ -56,7 +43,6 @@ header a:hover {
     text-decoration: underline;
 }
 
-/* HEADINGS */
 h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -70,19 +56,16 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* TEXT */
 p {
     margin-bottom: 10px;
     line-height: 1.5;
 }
 
-/* LIST */
 ul {
     margin-left: 20px;
     margin-bottom: 10px;
 }
 
-/* IMAGE */
 img {
     width: 100%;
     max-width: 500px;
@@ -91,22 +74,26 @@ img {
     border: 1px solid #00ff9c;
 }
 
-/* SCANNER BOX */
 #scanner {
     margin-top: 30px;
     padding: 15px;
     border: 1px solid #00ff9c;
     border-radius: 8px;
+    animation: pulseGlow 3s infinite;
 }
 
-/* GRID */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 5px #00ff9c; }
+    50% { box-shadow: 0 0 20px #00ff9c; }
+    100% { box-shadow: 0 0 5px #00ff9c; }
+}
+
 .stats-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
 
-/* INPUTS */
 .input-group {
     display: flex;
     flex-direction: column;
@@ -130,7 +117,6 @@ input:focus {
     box-shadow: 0 0 8px #00ff9c;
 }
 
-/* BUTTON */
 button {
     margin-top: 15px;
     padding: 10px;
@@ -147,10 +133,15 @@ button:hover {
     box-shadow: 0 0 10px #00ff9c;
 }
 
-/* RESULT */
 #result {
     margin-top: 15px;
     font-size: 1.2rem;
+}
+
+#powerText {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 8px #00ff9c;
 }
 
 .classification {
@@ -158,7 +149,19 @@ button:hover {
     margin-top: 5px;
 }
 
-/* FOOTER */
+.image-credit {
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    border-left: 3px solid #00ff9c;
+    background: rgba(0, 255, 156, 0.05);
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.center-text {
+    text-align: center;
+}
+
 footer {
     margin-top: 20px;
     text-align: center;
@@ -166,7 +169,6 @@ footer {
     opacity: 0.7;
 }
 
-/* RESPONSIVE */
 @media (max-width: 600px) {
     .stats-grid {
         grid-template-columns: 1fr;

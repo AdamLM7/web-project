@@ -14,31 +14,38 @@ scanBtn.addEventListener("click", () => {
 
     const powerLevel = strength + speed + endurance + energy + stamina;
 
+    
     powerText.textContent = "Scanning energy signature...";
-    classificationText.textContent = "";
+    classificationText.textContent = "Calibrating scouter...";
 
     setTimeout(() => {
 
         let classification = "";
 
         if (powerLevel < 100) {
-    classification = "Low-tier fighter";
-} else if (powerLevel < 300) {
-    classification = "Trained warrior";
-} else if (powerLevel < 600) {
-    classification = "Elite combatant";
-} else if (powerLevel < 1000) {
-    classification = "Planetary threat";
-} else if (powerLevel < 5000) {
-    classification = "God-tier entity";
-} else if (powerLevel < 9000) {
-    classification = "Mythic-level anomaly";
-} else {
-    classification = "⚠️ IT'S OVER 9000! ⚠️";
-}
+            classification = "Low-tier fighter";
+        } else if (powerLevel < 300) {
+            classification = "Trained warrior";
+        } else if (powerLevel < 600) {
+            classification = "Elite combatant";
+        } else if (powerLevel < 1000) {
+            classification = "Planetary threat";
+        } else if (powerLevel < 5000) {
+            classification = "God-tier entity";
+        } else if (powerLevel < 9000) {
+            classification = "Mythic-level anomaly";
+        } else {
+            classification = "⚠️ IT'S OVER 9000! ⚠️";
+        }
 
-        powerText.textContent = `Scouter reading complete: ${powerLevel}`;
-        classificationText.textContent = classification;
+        // 👇 FINAL OUTPUT
+        powerText.textContent = `Power Level: ${powerLevel.toLocaleString()}`;
+        classificationText.textContent = `${classification} | Reading stabilized`;
+
+        
+        if (powerLevel >= 9000) {
+            document.body.style.background = "darkred";
+        }
 
     }, 1000);
 });
