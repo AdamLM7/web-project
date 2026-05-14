@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTech Solutions</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- SKIP LINK (Accessibility Improvement) -->
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header>
+    <nav aria-label="Main navigation"> 
+    <a href="index.html">Home</a> /
+    <a href="about.html">About</a> /
+    <a href="products.html">Products</a> /
+    <a href="blog.html">Blog</a> /
+    <a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>GreenTech Solutions</h1>
+        <p>Innovative eco-friendly technology for a sustainable future.</p>
+    </section>
+
+    <!-- MISSION SECTION -->
+    <section>
+        <h2>Our Mission</h2>
+        <p>
+            GreenTech Solutions helps businesses reduce their carbon footprint
+            through smart, efficient, and sustainable technology solutions.
+        </p>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section>
+        <h2>What We Do</h2>
+
+        <ul>
+            <li>Energy-efficient smart devices</li>
+            <li>Carbon tracking software</li>
+            <li>Smart recycling systems</li>
+            <li>Renewable energy integration tools</li>
+        </ul>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section>
+        <h2>Featured Solutions</h2>
+
+        <div class="product-grid">
+
+            <div class="card" role="article">
+                <img src="images/solar.jpg" alt="Solar energy panels">
+                <h3>Solar Energy Systems</h3>
+                <p>Reduce energy costs with renewable solar technology.</p>
+            </div>
+
+            <div class="card" role="article">
+                <img src="images/recycling.jpg" alt="Smart recycling system">
+                <h3>Smart Recycling</h3>
+                <p>Automated waste sorting for modern businesses.</p>
+            </div>
+
+            <div class="card" role="article">
+                <img src="images/carbon.jpg" alt="Carbon tracking dashboard">
+                <h3>Carbon Tracker</h3>
+                <p>Monitor and reduce your emissions in real time.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CALCULATOR -->
+    <section id="calculator">
+
+        <h2>🌱 Green Impact Score Calculator</h2>
+
+        <p>
+            Rate each category from <strong>0 (low impact)</strong> to <strong>100 (highly sustainable)</strong>
+            to calculate your estimated environmental performance score.
+        </p>
+
+        <div class="stats-grid">
+
+            <div class="input-group">
+                <label for="energy">Energy Savings (0–100):</label>
+                <input type="number" id="energy" min="0" max="100">
+            </div>
+
+            <div class="input-group">
+                <label for="recycling">Recycling Rate (0–100):</label>
+                <input type="number" id="recycling" min="0" max="100">
+            </div>
+
+            <div class="input-group">
+                <label for="renewable">Renewable Energy Usage (0–100):</label>
+                <input type="number" id="renewable" min="0" max="100">
+            </div>
+
+            <div class="input-group">
+                <label for="waste">Waste Reduction (0–100):</label>
+                <input type="number" id="waste" min="0" max="100">
+            </div>
+
+            <div class="input-group">
+                <label for="water">Water Conservation (0–100):</label>
+                <input type="number" id="water" min="0" max="100">
+            </div>
+
+        </div>
+
+        <button type="button" id="calcBtn">Calculate Impact Score</button>
+
+        <div id="result">
+            <p id="scoreText">Eco Score: ---</p>
+            <p class="classification"></p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 GreenTech Solutions. Building a sustainable future.</p>
+</footer>
+
+<script src="javascript/script.js" defer></script>
+
+</body>
+</html>
