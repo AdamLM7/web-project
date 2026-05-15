@@ -8,7 +8,7 @@ The goal of the site is to provide clear information about the company, showcase
 ---
 
 ## Live Site
-[Insert your GitHub Pages link here]
+[(https://adamlm7.github.io/web-project/final/)]
 
 ---
 
