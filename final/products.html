@@ -10,28 +10,25 @@
 
 <body>
 
-<!-- SKIP LINK -->
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <header>
     <nav aria-label="Main navigation"> 
-    <a href="index.html">Home</a> /
-    <a href="about.html">About</a> /
-    <a href="products.html">Products</a> /
-    <a href="blog.html">Blog</a> /
-    <a href="contact.html">Contact</a>
-</nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
 <main id="main-content">
 
-    <!-- HERO -->
     <section class="hero">
         <h1>Our Products</h1>
         <p>Smart, sustainable technology built for modern businesses.</p>
     </section>
 
-    <!-- INTRO -->
     <section>
         <h2>What We Offer</h2>
         <p>
@@ -40,28 +37,40 @@
         </p>
     </section>
 
+    <!-- FILTER CONTROLS (JS REQUIREMENT FIX) -->
+    <section aria-label="Product filters">
+        <h2>Browse Products</h2>
+
+        <div class="filter-buttons">
+            <button type="button" data-filter="all">All</button>
+            <button type="button" data-filter="energy">Energy</button>
+            <button type="button" data-filter="waste">Waste</button>
+            <button type="button" data-filter="data">Data</button>
+        </div>
+    </section>
+
     <!-- PRODUCTS GRID -->
-    <section>
+    <section aria-label="Product list">
         <h2>Featured Products</h2>
 
         <div class="product-grid">
 
-            <article class="card">
+            <article class="card" data-category="energy">
                 <h3>☀️ Solar Energy</h3>
-                <p>High-efficiency solar solutions to reduce energy costs and emissions.</p>
+                <p>High-efficiency solar systems designed to reduce operational costs and carbon emissions.</p>
             </article>
 
-            <article class="card">
+            <article class="card" data-category="waste">
                 <h3>♻️ Smart Recycling</h3>
                 <p>Automated waste sorting systems for cleaner, smarter waste management.</p>
             </article>
 
-            <article class="card">
+            <article class="card" data-category="data">
                 <h3>🌎 Carbon Tracker</h3>
                 <p>Real-time emissions tracking to help businesses meet sustainability goals.</p>
             </article>
 
-            <article class="card">
+            <article class="card" data-category="energy">
                 <h3>🔋 Energy Optimizer</h3>
                 <p>AI-driven tools to monitor and reduce energy consumption efficiently.</p>
             </article>
@@ -74,6 +83,8 @@
 <footer>
     <p>© 2026 GreenTech Solutions. Building a sustainable future.</p>
 </footer>
+
+<script src="javascript/script.js" defer></script>
 
 </body>
 </html>

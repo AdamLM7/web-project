@@ -8,45 +8,47 @@ document.addEventListener("DOMContentLoaded", function () {
     const scoreText = document.getElementById("scoreText");
     const classification = document.querySelector(".classification");
 
-    calcBtn.addEventListener("click", function () {
+    if (calcBtn) {
+        calcBtn.addEventListener("click", function () {
 
-        const energy = Math.min(Math.max(Number(document.getElementById("energy").value), 0), 100);
-        const recycling = Math.min(Math.max(Number(document.getElementById("recycling").value), 0), 100);
-        const renewable = Math.min(Math.max(Number(document.getElementById("renewable").value), 0), 100);
-        const waste = Math.min(Math.max(Number(document.getElementById("waste").value), 0), 100);
-        const water = Math.min(Math.max(Number(document.getElementById("water").value), 0), 100);
+            const energy = Math.min(Math.max(Number(document.getElementById("energy").value), 0), 100);
+            const recycling = Math.min(Math.max(Number(document.getElementById("recycling").value), 0), 100);
+            const renewable = Math.min(Math.max(Number(document.getElementById("renewable").value), 0), 100);
+            const waste = Math.min(Math.max(Number(document.getElementById("waste").value), 0), 100);
+            const water = Math.min(Math.max(Number(document.getElementById("water").value), 0), 100);
 
-        if (
-            isNaN(energy) || isNaN(recycling) || isNaN(renewable) ||
-            isNaN(waste) || isNaN(water)
-        ) {
-            scoreText.textContent = "Eco Score: Please enter all values";
-            classification.textContent = "";
-            return;
-        }
+            if (
+                isNaN(energy) || isNaN(recycling) || isNaN(renewable) ||
+                isNaN(waste) || isNaN(water)
+            ) {
+                scoreText.textContent = "Eco Score: Please enter all values";
+                classification.textContent = "";
+                return;
+            }
 
-        const score =
-            (energy * 0.2) +
-            (recycling * 0.25) +
-            (renewable * 0.25) +
-            (waste * 0.15) +
-            (water * 0.15);
+            const score =
+                (energy * 0.2) +
+                (recycling * 0.25) +
+                (renewable * 0.25) +
+                (waste * 0.15) +
+                (water * 0.15);
 
-        const finalScore = Math.round(score);
+            const finalScore = Math.round(score);
 
-        scoreText.textContent = `Eco Score: ${finalScore}`;
+            scoreText.textContent = `Eco Score: ${finalScore}`;
 
-        if (finalScore >= 80) {
-            classification.textContent = "Excellent 🌱 Highly Sustainable";
-        } else if (finalScore >= 60) {
-            classification.textContent = "Good 👍 Room for Improvement";
-        } else if (finalScore >= 40) {
-            classification.textContent = "Average ⚠️ Needs Improvement";
-        } else {
-            classification.textContent = "Low Impact ❗ Major Changes Needed";
-        }
+            if (finalScore >= 80) {
+                classification.textContent = "Excellent 🌱 Highly Sustainable";
+            } else if (finalScore >= 60) {
+                classification.textContent = "Good 👍 Room for Improvement";
+            } else if (finalScore >= 40) {
+                classification.textContent = "Average ⚠️ Needs Improvement";
+            } else {
+                classification.textContent = "Low Impact ❗ Major Changes Needed";
+            }
 
-    });
+        });
+    }
 
 
     // =========================
@@ -103,5 +105,35 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+
+    // =========================
+    // PRODUCT FILTER SYSTEM
+    // =========================
+
+    const filterButtons = document.querySelectorAll(".filter-buttons button");
+    const productCards = document.querySelectorAll(".product-grid .card");
+
+if (filterButtons.length > 0 && productCards.length > 0) {
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            const filter = this.dataset.filter;
+
+            productCards.forEach(card => {
+                const category = card.dataset.category;
+
+                if (filter === "all" || category === filter) {
+                    card.classList.remove("hidden");
+                } else {
+                    card.classList.add("hidden");
+                }
+            });
+
+        });
+    });
+
+}
 
 });

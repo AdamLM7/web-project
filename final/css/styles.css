@@ -1,15 +1,11 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+/* ========================= GLOBAL RESET ========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   COLOR THEME
-========================= */
+/* ========================= COLOR THEME ========================= */
 :root {
     --green-dark: #05320a;
     --green: #16793c;
@@ -19,9 +15,11 @@
     --text-dark: #2e2e2e;
 }
 
-/* =========================
-   BODY & TYPOGRAPHY
-========================= */
+.text-center {
+    text-align: center;
+}
+
+/* ========================= BODY & TYPOGRAPHY ========================= */
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -29,9 +27,7 @@ body {
     background-color: #f4f8f4;
 }
 
-/* =========================
-   HEADER & NAVIGATION
-========================= */
+/* ========================= HEADER & NAVIGATION ========================= */
 header {
     background: var(--green-dark);
 }
@@ -67,6 +63,33 @@ nav a.active {
     pointer-events: none;
 }
 
+/* ========================= SKIP LINK (ACCESSIBILITY FIX) ========================= */
+/* ========================= SKIP LINK ========================= */
+.skip-link {
+    position: absolute;
+    left: 10px;
+    top: -100px;
+
+    background-color: #ffffff;
+    color: #000000;
+
+    padding: 10px 14px;
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    z-index: 10000;
+
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    top: 10px;
+}
+
+/* ========================= MOBILE NAV ========================= */
 @media (max-width: 500px) {
     nav {
         flex-direction: column;
@@ -74,9 +97,7 @@ nav a.active {
     }
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* ========================= HERO SECTION ========================= */
 .hero {
     background: linear-gradient(to right, var(--green-dark), var(--green));
     color: var(--white);
@@ -89,24 +110,14 @@ nav a.active {
     margin-bottom: 10px;
 }
 
-/* =========================
-   SECTION BASE
-========================= */
+/* ========================= SECTION BASE ========================= */
 section {
     padding: 40px 20px;
     max-width: 1100px;
     margin: auto;
 }
 
-/* Centered text sections (hero, mission, intros) */
-.text-center {
-    text-align: center;
-}
-
-/* =========================
-   CARDS (PRODUCTS / BLOG)
-   3D hover effect
-========================= */
+/* ========================= CARDS ========================= */
 .product-grid,
 .blog-grid {
     display: grid;
@@ -147,18 +158,14 @@ section {
     color: var(--green-dark);
 }
 
-/* =========================
-   LISTS
-========================= */
+/* ========================= LISTS ========================= */
 ul {
     list-style-type: disc;
     padding-left: 20px;
     margin-top: 10px;
 }
 
-/* =========================
-   FORMS (CONTACT PAGE)
-========================= */
+/* ========================= FORMS ========================= */
 form {
     background: var(--white);
     padding: 20px;
@@ -186,6 +193,7 @@ textarea {
     border-radius: 6px;
 }
 
+/* ========================= BUTTONS ========================= */
 button {
     background: var(--green);
     color: var(--white);
@@ -202,9 +210,7 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ========================= FOOTER ========================= */
 footer {
     text-align: center;
     padding: 20px;
@@ -213,11 +219,30 @@ footer {
     margin-top: 40px;
 }
 
-/* =========================
-   FORM FEEDBACK MESSAGE
-========================= */
-
+/* ========================= FORM FEEDBACK ========================= */
 #formFeedback {
     margin-top: 10px;
     font-weight: bold;
+}
+
+/* ========================= BLOG IMAGE ========================= */
+.blog-feature-img {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* ========================= STATS GRID (CALCULATOR FIX) ========================= */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none !important;
 }

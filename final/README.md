@@ -3,7 +3,7 @@
 ## Project Overview
 This project is a multi-page website built for a fictional client called GreenTech Solutions. The company focuses on eco-friendly and sustainable technology solutions for businesses.
 
-The goal of the site is to provide information about the company, showcase products, share blog content, and allow users to contact the company through a working form.
+The goal of the site is to provide clear information about the company, showcase its products, share blog content, and allow users to contact the company through a working form.
 
 ---
 
@@ -24,53 +24,53 @@ The goal of the site is to provide information about the company, showcase produ
 ## Features
 
 ### HTML Structure
-- Semantic HTML5 elements used throughout the site
-- Multiple pages with consistent navigation
-- Forms with proper labels and inputs
-- Structured content for readability and accessibility
+- Semantic HTML5 elements used throughout the site for better structure and accessibility
+- Multi-page layout with consistent navigation across all pages
+- Forms include proper labels and input associations
+- Content is structured for readability and user experience
 
 ---
 
 ### CSS Styling
-- External stylesheet used for all pages
-- Green-based color theme to match the client
-- Responsive layout using flexbox and grid
-- Card layout used for products and blog sections
-- Hover effects for interactive elements
+- External stylesheet used across the entire site
+- Consistent green-themed color palette matching the brand
+- Responsive layout using Flexbox and CSS Grid
+- Card-based design for products and blog posts
+- Hover effects added for interactive elements and improved UX
 
 ---
 
 ### JavaScript Interactivity
-This project includes two main features:
+This project includes two main interactive features:
 
-1. Eco Impact Score Calculator
+#### 1. Eco Impact Score Calculator
 - Users input values from 0 to 100
-- JavaScript calculates a weighted score
-- Outputs a result classification (Excellent, Good, Average, Low Impact)
-- Input values are limited between 0 and 100
+- JavaScript calculates a weighted sustainability score
+- Outputs a classification (Excellent, Good, Average, Low Impact)
+- Input values are validated and constrained between 0 and 100
 
-2. Contact Form Validation
-- Checks required fields (name, email, message)
-- Validates email format
-- Ensures message length is sufficient
-- Displays error or success messages
-- Highlights invalid fields
+#### 2. Contact Form Validation
+- Validates required fields (name, email, message)
+- Checks for valid email format
+- Ensures message meets minimum length requirement
+- Displays error or success messages dynamically
+- Highlights invalid input fields for better user feedback
 
 ---
 
 ### Responsive Design
-- Mobile-friendly layout
-- Flexible grid system
-- Navigation works across screen sizes
+- Mobile-friendly layout across all pages
+- Flexible grid system adapts to different screen sizes
+- Navigation remains usable on smaller screens
 - Tested using browser developer tools
 
 ---
 
 ### Accessibility Features
-- Alt text used for images
-- Semantic HTML structure
-- Proper form labels
-- Skip-to-content link added
+- Alt text included for all images
+- Semantic HTML structure used throughout
+- Proper form labels and input associations
+- Skip-to-content link for keyboard navigation
 - Consistent navigation across all pages
 
 ---
@@ -84,5 +84,5 @@ This project includes two main features:
 ---
 
 ## Notes
-- This project was built to meet a full web development rubric including HTML, CSS, JavaScript, responsiveness, and accessibility.
+- This project was built to meet a full web development rubric covering HTML, CSS, JavaScript, responsiveness, and accessibility.
 - JavaScript is used for both the calculator and form validation features.

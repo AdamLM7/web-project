@@ -10,17 +10,17 @@
 
 <body>
 
-<!-- SKIP LINK (accessibility consistency) -->
+<!-- SKIP LINK -->
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <header>
     <nav aria-label="Main navigation"> 
-    <a href="index.html">Home</a> /
-    <a href="about.html">About</a> /
-    <a href="products.html">Products</a> /
-    <a href="blog.html">Blog</a> /
-    <a href="contact.html">Contact</a>
-</nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
 <main id="main-content">
@@ -55,7 +55,7 @@
         </p>
     </section>
 
-    <!-- TEAM SECTION -->
+    <!-- TEAM -->
     <section>
         <h2>Our Team</h2>
         <p>
@@ -66,38 +66,40 @@
         <ul>
             <li><strong>Engineering Team:</strong> Builds scalable and efficient green technology systems.</li>
             <li><strong>Design Team:</strong> Creates user-friendly, accessible digital experiences.</li>
-            <li><strong>Sustainability Experts:</strong> Ensure every solution meets environmental impact standards.</li>
-            <li><strong>Operations Team:</strong> Connects our technology with real-world business needs.</li>
+            <li><strong>Sustainability Experts:</strong> Ensure environmental impact standards are met.</li>
+            <li><strong>Operations Team:</strong> Connects technology with real-world business needs.</li>
         </ul>
     </section>
 
-    <!-- TIMELINE -->
-    <section>
-        <h2>Our Journey</h2>
+    <!-- TIMELINE (FIXED SEMANTICS) -->
+    <section class="timeline" aria-labelledby="timeline-heading">
 
-        <div class="timeline">
+        <h2 id="timeline-heading">Our Journey</h2>
 
-            <article class="event">
-                <h3>2022 — The Idea</h3>
-                <p>GreenTech Solutions was founded to explore how technology can reduce global carbon emissions.</p>
-            </article>
+        <p class="text-center">
+            A look at how GreenTech Solutions has grown over time.
+        </p>
 
-            <article class="event">
-                <h3>2023 — First Prototype</h3>
-                <p>We launched our first carbon tracking and energy optimization prototype for small businesses.</p>
-            </article>
+        <section class="event">
+            <h3>2022 — The Idea</h3>
+            <p>GreenTech Solutions was founded to explore how technology can reduce global carbon emissions.</p>
+        </section>
 
-            <article class="event">
-                <h3>2024 — Expansion</h3>
-                <p>Partnered with regional companies to implement smart recycling and renewable energy tools.</p>
-            </article>
+        <section class="event">
+            <h3>2023 — First Prototype</h3>
+            <p>We launched our first carbon tracking and energy optimization prototype for small businesses.</p>
+        </section>
 
-            <article class="event">
-                <h3>2025 — Scaling Impact</h3>
-                <p>Expanded globally, helping organizations reduce environmental impact at scale.</p>
-            </article>
+        <section class="event">
+            <h3>2024 — Expansion</h3>
+            <p>Partnered with regional companies to implement smart recycling and renewable energy tools.</p>
+        </section>
 
-        </div>
+        <section class="event">
+            <h3>2025 — Scaling Impact</h3>
+            <p>Expanded globally, helping organizations reduce environmental impact at scale.</p>
+        </section>
+
     </section>
 
 </main>
